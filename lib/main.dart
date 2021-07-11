@@ -29,14 +29,7 @@ class MyHomePage extends StatelessWidget {
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(20),
-              color: Colors.grey,
-              width: double.infinity,
-              height: 30,
-            ),
-          ),
+          rectangleContainer(),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -47,21 +40,8 @@ class MyHomePage extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(20),
-              color: Colors.grey,
-              width: double.infinity,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(20),
-              color: Colors.grey,
-              width: double.infinity,
-              height: 30,
-            ),
-          ),
+          rectangleContainer(),
+          rectangleContainer(),
           Expanded(
             flex: 2,
             child: Row(
@@ -72,20 +52,8 @@ class MyHomePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          margin: EdgeInsets.all(20),
-                          color: Colors.grey,
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          margin: EdgeInsets.all(20),
-                          color: Colors.grey,
-                        ),
-                      )
+                      squareCont(),
+                      squareCont(),
                     ],
                   ),
                 ),
@@ -100,6 +68,15 @@ class MyHomePage extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Expanded rectangleContainer() {
+    return Expanded(
+      child: Container(
+        margin: EdgeInsets.all(20),
+        color: Colors.grey,
       ),
     );
   }
